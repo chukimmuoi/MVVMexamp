@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://robobinding.org/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="7dp"
+    tools:ignore="MissingPrefix" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/danhsachketquahoctap"
+            android:textColor="#00EE00"
+            android:textSize="22sp"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:id="@+id/activity_danhsachbangdiem_et_timkiem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_edit_text_left_round_border"
+            android:gravity="center"
+            android:hint="@string/searchbymonhoc"
+            bind:text="${timkiem}" >
+
+            <requestFocus />
+        </EditText>
+
+        <ListView
+            android:id="@+id/activity_danhsachbangdiem_lv_danhsach"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            bind:source="{listviewValue}"
+            bind:itemLayout="@layout/item_danhsachbangdiem"
+            bind:onItemClick="onItemClickListView" >
+        </ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_danhsachbangdiem_btn_themketqua"
+        style="@style/btnStyleXanhDuongRadius"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_alignParentBottom="true"
+        android:text="@string/themketqua"
+        bind:onClick="onClickThemKetQua" />
+
+</RelativeLayout>

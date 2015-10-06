@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/chukimmuoi/mvvm/model/controller/BangDiemCtr.java=UTF-8
+encoding//src/chukimmuoi/mvvm/model/table/BangDiem.java=UTF-8
+encoding//src/chukimmuoi/mvvm/utils/database/DatabaseHelper.java=UTF-8
+encoding//src/chukimmuoi/mvvm/view/activity/QuanLyDiemActivity.java=UTF-8
+encoding//src/chukimmuoi/mvvm/view/custom/DialogChucNangCustom.java=UTF-8
+encoding//src/chukimmuoi/mvvm/viewmodel/controller/DanhSachBangDiemCtr.java=UTF-8
+encoding//src/chukimmuoi/mvvm/viewmodel/controller/DialogChucNangCtr.java=UTF-8
+encoding//src/chukimmuoi/mvvm/viewmodel/controller/QuanLyDiemCtr.java=UTF-8

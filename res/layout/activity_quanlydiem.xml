@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://robobinding.org/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="7dp"
+    tools:ignore="MissingPrefix" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/quanlydiem"
+                android:textColor="#46609C"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/quanlydiem_et_hocky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text_left_round_border"
+                android:gravity="center"
+                android:hint="@string/hocky"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                bind:text="${hocky}" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/quanlydiem_et_monhoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text_left_round_border"
+                android:gravity="center"
+                android:hint="@string/monhoc"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                bind:enabled="{enabledMonHoc}"
+                bind:text="${monhoc}" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/quanlydiem_et_sotinchi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text_left_round_border"
+                android:gravity="center"
+                android:hint="@string/sotinchi"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                bind:enabled="{enabledSoTinChi}"
+                bind:text="${sotinchi}" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/quanlydiem_et_diemquatrinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text_left_round_border"
+                android:gravity="center"
+                android:hint="@string/diemquatrinh"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                bind:enabled="{enabledDiemQuaTrinh}"
+                bind:text="${diemquatrinh}" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/quanlydiem_et_diemthi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edit_text_left_round_border"
+                android:gravity="center"
+                android:hint="@string/diemthi"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                bind:enabled="{enabledDiemThi}"
+                bind:text="${diemthi}" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <Button
+                    android:id="@+id/quanlydiem_btn_ok"
+                    style="@style/btnStyleXanhDuongRadius"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/ok"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
+                    bind:onClick="onClickOk" />
+
+                <Button
+                    android:id="@+id/quanlydiem_btn_cancel"
+                    style="@style/btnStyleXanhDuongRadius"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/cancel"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
+                    bind:onClick="onClickCancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
