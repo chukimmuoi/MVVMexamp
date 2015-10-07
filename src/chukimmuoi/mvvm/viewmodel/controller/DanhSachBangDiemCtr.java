@@ -12,6 +12,8 @@ import org.robobinding.viewattribute.adapterview.ItemClickEvent;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import chukimmuoi.mvvm.constants.Constanst;
 import chukimmuoi.mvvm.model.myinterface.IBangDiem;
 import chukimmuoi.mvvm.model.table.BangDiem;
@@ -19,17 +21,16 @@ import chukimmuoi.mvvm.view.activity.QuanLyDiemActivity;
 import chukimmuoi.mvvm.view.adapter.DanhSachBangDiemItem;
 import chukimmuoi.mvvm.view.custom.DialogChucNangCustom;
 import chukimmuoi.mvvm.viewmodel.myinterface.IDanhSachBangDiem;
-import chukimmuoi.mvvm.viewmodel.myinterface.IDialogChucNang;
 
 import com.google.inject.Inject;
 
 @PresentationModel
-public class DanhSachBangDiemCtr implements IDanhSachBangDiem, IDialogChucNang{
+public class DanhSachBangDiemCtr implements IDanhSachBangDiem{
 	@Inject
 	private IBangDiem iBangDiem;
 	private Context context;
-	
 	private String timkiem = "";
+	
 	@Inject
 	public DanhSachBangDiemCtr(Context context) {
 		super();
@@ -89,39 +90,8 @@ public class DanhSachBangDiemCtr implements IDanhSachBangDiem, IDialogChucNang{
 	}
 	
 	public void onItemClickListView(ItemClickEvent event){
-		DialogChucNangCustom dialog = new DialogChucNangCustom(getContext());
-		//TRUYỀN DIALOG
-		dialog.setDialog(dialog);
-		dialog.show();
-	}
-
-	@Override
-	public void sua() {
-		
-	}
-
-	@Override
-	public void xoa() {
-		
-	}
-
-	@Override
-	public void xemchitiet() {
-		
-	}
-
-	@Override
-	public void tongkethocky() {
-		
-	}
-
-	@Override
-	public void thoatdialog() {
-		
-	}
-
-	@Override
-	public void thoatungdung() {
-		
+		FragmentManager fm = ((FragmentActivity) getContext()).getSupportFragmentManager();
+        DialogChucNangCustom editNameDialog = new DialogChucNangCustom();
+        editNameDialog.show(fm, "LOL");
 	}
 }

@@ -3,8 +3,10 @@ package chukimmuoi.mvvm;
 import chukimmuoi.mvvm.model.controller.BangDiemCtr;
 import chukimmuoi.mvvm.model.myinterface.IBangDiem;
 import chukimmuoi.mvvm.viewmodel.controller.DanhSachBangDiemCtr;
+import chukimmuoi.mvvm.viewmodel.controller.DialogChucNangCtr;
 import chukimmuoi.mvvm.viewmodel.controller.QuanLyDiemCtr;
 import chukimmuoi.mvvm.viewmodel.myinterface.IDanhSachBangDiem;
+import chukimmuoi.mvvm.viewmodel.myinterface.IDialogChucNang;
 import chukimmuoi.mvvm.viewmodel.myinterface.IQuanLyDiem;
 
 import com.google.inject.Binder;
@@ -16,5 +18,6 @@ public class BaseModule implements Module{
 		binder.bind(IBangDiem.class).to(BangDiemCtr.class);
 		binder.bind(IQuanLyDiem.class).to(QuanLyDiemCtr.class);
 		binder.bind(IDanhSachBangDiem.class).to(DanhSachBangDiemCtr.class);
+		binder.bind(IDialogChucNang.class).to(DialogChucNangCtr.class);
 	}
 }

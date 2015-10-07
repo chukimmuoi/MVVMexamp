@@ -17,6 +17,7 @@ import roboguice.activity.RoboActionBarActivity;
 public class DanhSachBangDiemActivity extends RoboActionBarActivity{
 	@Inject
 	DanhSachBangDiemCtr ctrDanhSachBangDiem;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
