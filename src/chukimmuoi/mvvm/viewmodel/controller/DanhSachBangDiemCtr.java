@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.widget.Toast;
 import chukimmuoi.mvvm.constants.Constanst;
 import chukimmuoi.mvvm.model.myinterface.IBangDiem;
 import chukimmuoi.mvvm.model.table.BangDiem;
@@ -93,5 +94,21 @@ public class DanhSachBangDiemCtr implements IDanhSachBangDiem{
 		FragmentManager fm = ((FragmentActivity) getContext()).getSupportFragmentManager();
         DialogChucNangCustom editNameDialog = new DialogChucNangCustom();
         editNameDialog.show(fm, "LOL");
+	}
+	
+	public void sua() {
+		Toast.makeText(getContext(), "sua", Toast.LENGTH_LONG).show();
+	}
+	
+	public void xoa() {
+		Toast.makeText(getContext(), "xoa", Toast.LENGTH_LONG).show();
+	}
+	
+	public void xemchitiet() {
+		Toast.makeText(getContext(), "xemchitiet", Toast.LENGTH_LONG).show();
+	}
+	
+	public void tongkethocky() {
+		Toast.makeText(getContext(), "tongkethocky", Toast.LENGTH_LONG).show();
 	}
 }

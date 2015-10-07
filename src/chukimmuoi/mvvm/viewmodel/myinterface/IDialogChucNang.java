@@ -1,6 +1,6 @@
 package chukimmuoi.mvvm.viewmodel.myinterface;
 
-public interface IDialogChucNang {
+public interface IDialogChucNang{
 	public void sua();
 	public void xoa();
 	public void xemchitiet();

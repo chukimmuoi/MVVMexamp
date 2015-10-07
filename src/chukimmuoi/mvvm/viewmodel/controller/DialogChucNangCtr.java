@@ -13,17 +13,16 @@ import chukimmuoi.mvvm.view.custom.DialogChucNangCustom;
 import chukimmuoi.mvvm.viewmodel.myinterface.IDialogChucNang;
 import android.app.Activity;
 import android.content.Context;
-import android.widget.Toast;
 
 @PresentationModel
-public class DialogChucNangCtr implements IDialogChucNang{
+public class DialogChucNangCtr extends DanhSachBangDiemCtr implements IDialogChucNang{
 	private Context context;
 	private DialogEnum dialog;
 	private DialogChucNangCustom dialogA;
 	
 	@Inject
 	public DialogChucNangCtr(Context context, DialogChucNangCustom dialogA){
-		super();
+		super(context);
 		setContext(context);
 		setDialogA(dialogA);
 	}
@@ -73,26 +72,6 @@ public class DialogChucNangCtr implements IDialogChucNang{
 		default:
 			break;
 		}
-	}
-	
-	@Override
-	public void sua() {
-		Toast.makeText(getContext(), "sua", Toast.LENGTH_LONG).show();
-	}
-	
-	@Override
-	public void xoa() {
-		Toast.makeText(getContext(), "xoa", Toast.LENGTH_LONG).show();
-	}
-	
-	@Override
-	public void xemchitiet() {
-		Toast.makeText(getContext(), "xemchitiet", Toast.LENGTH_LONG).show();
-	}
-	
-	@Override
-	public void tongkethocky() {
-		Toast.makeText(getContext(), "tongkethocky", Toast.LENGTH_LONG).show();
 	}
 	
 	@Override
